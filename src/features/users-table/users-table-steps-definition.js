@@ -15,7 +15,9 @@ When("attempts to create a new user", async function() {
 });
 
 When("attempts to delete user {string}", async function(userName) {
-
+  await this.homePage.clickOnDeleteUser(userName);
+  await this.deleteUserModal.waitForDeleteUserModalVisible();
+  await this.deleteUserModal.confirmDelete();
 });
 
 Then("can see the new user in the table", async function() {
@@ -24,9 +26,10 @@ Then("can see the new user in the table", async function() {
 });
 
 Then("can not see the user {string} in the table", async function(userName) {
-
+  let answer = this.homePage.searchForUserNameInTable(userName);
+  return this.assert.eventually.equal(answer, false);
 });
 
 When("reloads the page", async function() {
-  
+  return browser.refresh();
 });
