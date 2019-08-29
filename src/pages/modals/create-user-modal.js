@@ -55,8 +55,7 @@ class CreateUserModal {
       browser.findElement(this.CELLPHONE_INPUT).sendKeys(newUser.mobilePhone),
       browser.findElement(this.CUSTOMER_INPUT(newUser.customerCode)).click()
     ]);
-    await browser.findElement(this.SAVE_BUTTON).click();
-    await browser.sleep(5000);
+    return browser.findElement(this.SAVE_BUTTON).click();
   }
 }
 

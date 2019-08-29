@@ -11,7 +11,7 @@ Given(
 When("attempts to create a new user", async function() {
   await this.homePage.clickOnAddUser();
   await this.createUserModal.waitForCreateUserModalVisible();
-  await this.createUserModal.attempToCreateUser(this.newUser);
+  return this.createUserModal.attempToCreateUser(this.newUser);
 });
 
 When("attempts to delete user {string}", async function(userName) {
@@ -19,7 +19,8 @@ When("attempts to delete user {string}", async function(userName) {
 });
 
 Then("can see the new user in the table", async function() {
-
+  let answer = await this.homePage.searchForUserNameInTable(this.newUser.userName);
+  console.log(answer);
 });
 
 Then("can not see the user {string} in the table", async function(userName) {
