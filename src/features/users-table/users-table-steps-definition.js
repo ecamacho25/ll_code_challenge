@@ -19,8 +19,8 @@ When("attempts to delete user {string}", async function(userName) {
 });
 
 Then("can see the new user in the table", async function() {
-  let answer = await this.homePage.searchForUserNameInTable(this.newUser.userName);
-  console.log(answer);
+  let answer = this.homePage.searchForUserNameInTable(this.newUser.userName);
+  return this.assert.eventually.equal(answer, true);
 });
 
 Then("can not see the user {string} in the table", async function(userName) {
