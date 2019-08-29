@@ -1,0 +1,11 @@
+{
+  "default": {
+    "appURL": "http://www.way2automation.com/angularjs-protractor/webtables/"
+  },
+  "dev": {
+    "appURL": "http://www.way2automation.com/angularjs-protractor/webtables/"
+  },
+  "qa": {
+    "appURL": "http://www.way2automation.com/angularjs-protractor/webtables/"
+  }
+}

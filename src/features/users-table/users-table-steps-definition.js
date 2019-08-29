@@ -6,7 +6,7 @@ let loginAssertions;
 Given(
   "Juan access the webtables application in his web browser",
   async function() {
-    await browser.get("http://www.way2automation.com/angularjs-protractor/webtables/");
+    await browser.get(this.appURL);
     return browser.waitForAngular();
   }
 );
