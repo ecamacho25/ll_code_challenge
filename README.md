@@ -18,3 +18,7 @@ Know how:
 ## Run the tests
 
     $ npm test
+
+## Generate HTML report
+
+    $ npm run test:report
