@@ -1,8 +1,5 @@
 const { Given, When, Then } = require("cucumber");
 
-let loginPage;
-let loginAssertions;
-
 Given(
   "Juan access the webtables application in his web browser",
   async function() {
@@ -12,16 +9,22 @@ Given(
 );
 
 When("attempts to create a new user", async function() {
+  await this.homePage.clickOnAddUser();
+  return browser.waitForAngular();
 });
 
-When("attempts to delete user {string}", async function(username) {
+When("attempts to delete user {string}", async function(userName) {
+
 });
 
 Then("can see the new user in the table", async function() {
+
 });
 
-Then("can not see the user {string} in the table", async function(username) {
+Then("can not see the user {string} in the table", async function(userName) {
+
 });
 
 When("reloads the page", async function() {
+  
 });
