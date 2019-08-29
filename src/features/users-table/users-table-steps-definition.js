@@ -10,7 +10,8 @@ Given(
 
 When("attempts to create a new user", async function() {
   await this.homePage.clickOnAddUser();
-  return browser.waitForAngular();
+  await this.createUserModal.waitForCreateUserModalVisible();
+  await this.createUserModal.attempToCreateUser(this.newUser);
 });
 
 When("attempts to delete user {string}", async function(userName) {
