@@ -1,0 +1,38 @@
+{
+  "name": "ll_code_challenge",
+  "version": "1.0.0",
+  "description": "Solution to challenge",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf typeScript/",
+    "clean-build": "npm run clean && npm run build",
+    "test": "protractor typeScript/config/config.js",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecamacho25/ll_code_challenge.git"
+  },
+  "author": "ecamacho25",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecamacho25/ll_code_challenge/issues"
+  },
+  "homepage": "https://github.com/ecamacho25/ll_code_challenge#readme",
+  "dependencies": {
+    "protractor": "^5.4.4",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/cucumber": "^6.0.1",
+    "@types/node": "^13.13.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^6.0.5",
+    "protractor-cucumber-framework": "^6.2.1",
+    "ts-node": "^8.9.0"
+  }
+}
